@@ -5,6 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Bo Hürth">
 	<link rel="stylesheet" href="css/bulma.min.css">
+	<script>
+		function dsgvo_open() {
+		var element = document.getElementById("dsgvo");
+		element.classList.add("is-active");
+		}
+		function dsgvo_close() {
+			document.getElementById("dsgvo").classList.remove("is-active");
+		}
+	</script>
 	<title>
 		Bo Hürth
 	</title>
@@ -16,7 +25,7 @@
 		<!-- INFO BOX -->
 		<div class="hero-head">
 			<div class="notification is-info has-text-centered">
-				<p> &#9432 Der <b>Bo Hürth</b> präsentiert sich auf dem <a href="">Stadtfest Hürth</a></p>
+				<p> &#9432 Der <b>Bo Hürth</b> präsentiert sich auf dem <a target="_blank" href="https://www.huerth.de/huerthleben/aktuelles_stadtfest.php">Stadtfest Hürth</a></p>
 			</div>
 		</div>
 		
@@ -195,21 +204,42 @@
 		<div class="columns">
 			<div class="column">
 				<address class="has-text-white">
-					<b>Bo Hürth - Inklusion für alle e.V.</b><br>
-					<a href="mailto:bo_huerth@web.de">bo_huerth@web.de</a><br>
-						Lechenicher Weg 33<br>
-						50354 Hürth
-					</address>
+					<ul>
+						<li><b>Bo Hürth - Inklusion für alle e.V.</b></li>
+						<li><a href="mailto:bo_huerth@web.de">bo_huerth@web.de</a></li>
+						<li>Lechenicher Weg 33</li>
+						<li>50354 Hürth</li>
+					</ul>
+				</address>
 			</div>
 			<div class="column">
-				<p class="has-text-white">
-					Steuernummer: 224/5786/1897  Finanzamt Brühl<br>
-						Kreissparkasse Köln Kreissparkasse Köln
-						IBAN: DE35 3705 0299 0137 2871 81, BIC: COKSDE33XXX<br>
-							<a href="#">Datenschutz</a>
-						</a>
+				<p class="content">
+					<ul class="has-text-white">
+						<li>Steuernummer: 224/5786/1897  Finanzamt Brühl</li>
+						<li>Kreissparkasse Köln Kreissparkasse Köln</li>
+						<li>IBAN: DE35 3705 0299 0137 2871 81, BIC: COKSDE33XXX</li>>
+						<li><a onclick="dsgvo_open()">Datenschutz</a></li>
+					</ul>
+				</p>
 			</div>
 		</div>
-	</footer>
+	</fobuttonter>
+	
+	<div id="dsgvo" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">Datenschutz</p>
+			</header>
+			<section class="modal-card-body">
+				<!-- Content ... -->
+			</section>
+			<footer class="modal-card-foot buttons has-addons is-right">
+					<button class="button is-success" onclick="dsgvo_close()">ok</button>
+			</footer>
+		</div>
+	</div>
+	
+	
 </body>
 </html>
